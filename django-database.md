@@ -13,6 +13,6 @@ In order to solve this you can run the following commands:
 
 ```chown -R :www-data djangoProjectFolder```
 
-```chmod 755 djangoProjectFolder/bd.sqlite3```
+```chmod 755 djangoProjectFolder/db.sqlite3```
 
 and for the syntax in your settings.py you can follow the official documentation which can be found [here](https://docs.djangoproject.com/en/1.10/ref/settings/#name).
