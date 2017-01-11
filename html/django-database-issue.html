@@ -1,0 +1,24 @@
+<h1>Error: OperationalError at /admin/login/ unable to open database file</h1>
+
+<h1>Django version: 1.9.2</h1>
+
+<h2>When using sqlite this could turn out to be a common error, especially when attempting to login to the admin panel.</h2>
+
+<p>There are 3 reasons for this:</p>
+
+<ol>
+<li>Your sqlite database file is not writable or it is not owned by apache's group (www-data).</li>
+
+<li>Your sqlite database's file parent directory is not owned by the group www-data or not writable by it.</li>
+
+<li>You might need to change the NAME of the DATABASES in your settings.py and use the full path to the file.</li>
+</ol>
+
+<p>In order to solve this you can run the following commands:</p>
+
+<pre><code>chown -R :www-data djangoProjectFolder
+</code></pre>
+
+<pre><code>chmod 755 djangoProjectFolder/db.sqlite3</pre></code>
+
+<p>and for the syntax in your settings.py you can follow the official documentation which can be found <a href="https://docs.djangoproject.com/en/1.10/ref/settings/#name">here</a>.</p>
