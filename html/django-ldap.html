@@ -7,7 +7,7 @@ I followed the <a href="https://pythonhosted.org/django-auth-ldap/index.html">do
 <p>Then Google told me that my user had to be a member in all 3 Django groups(active, staff, superuser).
 So I did that to. But still nothing.</p>
 <p>I had logging enabled but the only thing shown there was &quot;Populating Django user test&quot; and nothing else. So it wasn't much of a help.</p>
-<p>I found the issue when I decided to look at my sqlite database. Users was being stored correctly, with all their attributes etc.</p>
+<p>I found the issue when I decided to look at my sqlite database. Users were being stored correctly, with all their attributes etc.</p>
 <p>But there was one error.</p>
 <p>Previously one of my users had logged in perfectly. 
 But I had used the def shown below to make him a django staff member.
