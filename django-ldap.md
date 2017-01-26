@@ -3,6 +3,7 @@
 
 ##Ldap connection is successful but user can't login to Django admin panel
 
+(ldap == openldap)
 As it turns out, connecting Django with Ldap is not as easy as it might seem.
 I followed the [documentation](https://pythonhosted.org/django-auth-ldap/index.html) exactly but still could not authenticate.
 
