@@ -15,7 +15,7 @@ But still nothing.
 I had logging enabled but the only thing shown there was "Populating Django user test" and nothing else. So it wasn't much of a help.
 
 I found the issue when I decided to look at my sqlite database. 
-Users was being stored correctly, with all their attributes etc. 
+Users were being stored correctly, with all their attributes etc. 
 
 But there was one error.
 
