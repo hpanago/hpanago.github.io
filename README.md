@@ -1,11 +1,11 @@
 # hpanago.github.io 
 or
-#hpanago.me
+# hpanago.me
 
 My site in case you want to find me on Facebook, Twitter, and, if not already viewing this readme, on Github.
 There are also notes in .md which look good here but too minimalistic on a browser.
 
-##Contributing
+## Contributing
 
 If you would like to add a blog post about some of your experiences please do so by opening a pull request.
 
