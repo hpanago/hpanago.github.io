@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gunicorn and Debian Stretch"
+title:  "How I lost my kernel for a night"
 date:   2019-03-20 23:29:18 +0200
 categories: grub initramfs debian jessie stretch
 ---
