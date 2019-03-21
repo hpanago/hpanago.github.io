@@ -60,7 +60,7 @@ Anyway,
 - mount --bind /dev /mnt/dev
 - mount --bind /sys /mnt/sys
 ```
-and `chroot /dev/mapper/encr_hostname_root/`. 
+and `chroot /mnt/`. 
 
 There I can see I indeed have no linux kernel installed, so I install it, `update-grub2` and reboot.
 
@@ -92,7 +92,10 @@ So this time I execute the following commands,
 - mount /dev/sda2 /mnt/boot
 - mount -t proc proc /mnt/proc
 - mount -o bind /dev /mnt/dev
+- chroot /mnt
 - update-initramfs -u -k all
 ```
 
 Finally, that made the trick, I rebooted into my system and it all worked.
+
+Kudos: [Recovering from an unbootable Ubuntu encrypted LVM root partition](https://feeding.cloud.geek.nz/posts/recovering-from-unbootable-ubuntu-encrypted-lvm-root-partition/)
