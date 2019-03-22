@@ -38,9 +38,10 @@ I reach home and at some point decide to boot it up, and suddenly I am in MemTes
 
 Thinking I pressed something wrong, I go back to grub menu, only to realize that no Debian entry was there.
 
-That is where I started panicing. And clearly learned to "never go full retard" while dist-upgrading.
+That is where I started panicking. And clearly learned to "never go full retard" while dist-upgrading.
 
-I drop instal grub shell, find my boot partition, but root partition is nowhere.
+I drop to a grub shell, manage to find my boot partition at (hd0,msdos1), 
+but root partition (hd0,msdos5) is `unknown` for grub.
 
 I had to get myself a LiveCD/usb, whatever, so as to mount my system and recover it.
 
