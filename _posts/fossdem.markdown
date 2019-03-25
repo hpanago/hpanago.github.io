@@ -102,3 +102,48 @@ Talk 7: Ceph Messenger v2
   - Depends on OS sockets to report their status (open, closed, can receive or not)
   
   
+Talk 8: How we use Gluster
+
+- Gluster as a Service
+- uses nfs to give storage to hosts
+- ganesha proxy, haproxy in active_active mode
+- They also use the Heketi tol
+- Ansible to deploy Heketi and create nfs volumes
+
+Talk 9: Container Storage Interface
+
+- Tries to be storage agnostic 
+  - Use this instead of different libraries for each type of storage one may have
+- Attaches after the container orchestrator
+
+Talk 10: What's new in Ceph Nautilus
+
+- We get a better Dashboard -> built-in, self-hosted part of Ceph
+- Management functions
+- Monitoring
+-orchestrator.py
+  -> blink devices!
+- Unified CLL for Ceph daemons
+  - ceph orchestrator osd ...
+  - ceph orchestrator ...
+- pg_num can be redused and automatically tuned in the background, based on expected usage
+- osds and mons report underlying storage metrics, scraping SMART metrics
+ - on failure prediction it automatically marks osds as "out"
+ 
+ - We also get crash reports on /var/lib/ceph/crash
+ - It can send data back to Ceph org via telemetry
+ - Messenger v2
+  - future support for both ipv4 and ipv6(and you may switch in between)
+ - You can tell an osd how much RAM to use (monitors RSS size)
+ - Has a progress bar when ceph cluster is under recovery (use `ceph progress`)
+ - Also can pin osds to certain nodes via NUMA managment
+ - "Misplaced" is not a HEALTH_WARN anymore by default
+ 
+ - Bluestore
+  - New "bitmap" allcoator
+  - per_poll utilization metrics
+  - balance memory allocation between RocksDB cache, Bluestore inodes, data
+- New "clay" erasure code plugin
+  - better recovery
+  - efficiency when <m nodes fail in a n+m cluster
+  
