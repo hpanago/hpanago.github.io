@@ -68,4 +68,37 @@ Talk 4: Cfgmgmt for Cfgmtmt
 - Example where pupeptservers are set up manually
 - Puppetservers do not support HA (what happens in grnet when p1 can't respond? How much time
 until the client, if ever speaks with another puppetmaster?)
+- Foreman -> lifecycle management
+  -> manage services via smartproxy -> pxe/tftpd/dhcp/dns
+  
+? But how about foreman and bare metal provisioning
 
+The speaker user cloud init -> foreman-installer -> puppet -> ansible -> lxc setup 
+just to provision a virtual machine
+
+Talk 5: Linux networking with nmstate
+
+- nmstate -> absract network configuration e.g. higher than iproute2
+
+Talk 6: Sysadmins, too, deserve stability
+
+- ansible from redhat
+- do differrent thing on various hosts with different OS
+
+Talk 7: Ceph Messenger v2
+
+- Messenger is a wire-protocol specification and software implementation
+- Small communication lirary, used for other Ceph components in order to talk to each other
+- Abstracs the actual transport protocol (sockets, RDMA, DPDK)
+- Automatic handling of temporary connections/failures
+- It has an API
+
+- Wire protocol -> Ceph component -> port 3300 -> v1 will still be available on port 6789
+
+- only userspace libraries will support v2
+- supports encryption-on-wire
+- can authenticate via cephx (connectors and acceptors, that is)
+- uses non-blocking sockets
+  - Depends on OS sockets to report their status (open, closed, can receive or not)
+  
+  
