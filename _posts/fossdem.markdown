@@ -1,4 +1,4 @@
-Talk 1: 10 years of (Puppet) Config Management
+### Talk 1: Ten years of Puppet installations: what now?
 
 - automate things that are the same on all sources
 - divide et Impera (one module reponsible for one and only thing)
@@ -10,7 +10,9 @@ Talk 1: 10 years of (Puppet) Config Management
 - Make people familiar with the tool
 - Share the right info with the right people
 
-Talk 2: Making your MySQL Replication run faster
+#### Link: https://fosdem.org/2019/schedule/event/ten_years_puppet/
+
+### Talk 2: Making your MySQL Replication run faster
 
 - You always need monitoring
   - For master: sustained throughtput under normal load and peak load at disaster time
@@ -27,8 +29,9 @@ Talk 2: Making your MySQL Replication run faster
 - with these options a slave can catch up faster after a "slave stop"
 - if network is slow, the above operation will be slow (so it adds network load)
 
+#### Link: https://fosdem.org/2019/schedule/event/mysql_replication_faster/
 
-Talk 3: MySLQ Un-Split brain aka Move back in time
+### Talk 3: MySQL Un-Split brain aka Move back in time
 
 - Problem desc: DC went down
   - Master and replicas -> network disconnected
@@ -63,7 +66,9 @@ Do some mathematical computations between old GTID and new one to find the corre
 - The state of the project is just a 20K bash script running in production
 - The do manul fuckups to test it
 
-Talk 4: Cfgmgmt for Cfgmtmt
+#### Link: https://fosdem.org/2019/schedule/event/unplitmysql/
+
+### Talk 4: Cfgmgmt for Cfgmtmt
 
 - Example where pupeptservers are set up manually
 - Puppetservers do not support HA (what happens in grnet when p1 can't respond? How much time
@@ -76,16 +81,22 @@ until the client, if ever speaks with another puppetmaster?)
 The speaker user cloud init -> foreman-installer -> puppet -> ansible -> lxc setup 
 just to provision a virtual machine
 
-Talk 5: Linux networking with nmstate
+#### Link: https://fosdem.org/2019/schedule/event/use_configmanagement/
+
+### Talk 5: Declare your Linux Network State (Linux networking with nmstate)
 
 - nmstate -> absract network configuration e.g. higher than iproute2
 
-Talk 6: Sysadmins, too, deserve stability
+#### Link: https://fosdem.org/2019/schedule/event/declare_linux_network_state/
+
+### Talk 6: Sysadmins, too, deserve stability
 
 - ansible from redhat
-- do differrent thing on various hosts with different OS
+- do differrent things on various hosts with different OS
 
-Talk 7: Ceph Messenger v2
+#### Link: https://fosdem.org/2019/schedule/event/sysadmins_deserve_interface_stability/
+
+### Talk 7: Ceph wire protocol revisited - Messenger V2
 
 - Messenger is a wire-protocol specification and software implementation
 - Small communication lirary, used for other Ceph components in order to talk to each other
@@ -101,8 +112,9 @@ Talk 7: Ceph Messenger v2
 - uses non-blocking sockets
   - Depends on OS sockets to report their status (open, closed, can receive or not)
   
+#### Link: https://fosdem.org/2019/schedule/event/ceph_msgrv2/
   
-Talk 8: How we use Gluster
+### Talk 8: How we use Gluster
 
 - Gluster as a Service
 - uses nfs to give storage to hosts
@@ -110,13 +122,17 @@ Talk 8: How we use Gluster
 - They also use the Heketi tol
 - Ansible to deploy Heketi and create nfs volumes
 
-Talk 9: Container Storage Interface
+#### Link: https://fosdem.org/2019/schedule/event/gluster_as_a_service/
+
+### Talk 9: The Container Storage Interface, Explained
 
 - Tries to be storage agnostic 
   - Use this instead of different libraries for each type of storage one may have
 - Attaches after the container orchestrator
 
-Talk 10: What's new in Ceph Nautilus
+#### Link: https://fosdem.org/2019/schedule/event/container_storage_interface_explained/
+
+### Talk 10: What's new in Ceph Nautilus
 
 - We get a better Dashboard -> built-in, self-hosted part of Ceph
 - Management functions
@@ -172,3 +188,5 @@ Talk 10: What's new in Ceph Nautilus
 - Run ceph clusters in Kubernetes
 - Kubernetes as a distributed "OS"
 - Rook storage orchestrator for Kubernetes ("operator for Ceph in Kubernetes")
+
+#### Link: https://fosdem.org/2019/schedule/event/ceph_project_status_update/
