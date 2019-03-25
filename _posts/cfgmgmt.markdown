@@ -16,7 +16,7 @@ and repackaged to exist on your master
 
 ### Talk 2: Automating Puppet certificates Renewal
 
-- we already did this at GRNet, perfectly, internal Phab tasks hav eit all
+- we already did this at GRNet, perfectly, internal Phab tasks have it all
   - We could blog post it
   - we could also use a uppet CA certificate check
 
