@@ -147,3 +147,28 @@ Talk 10: What's new in Ceph Nautilus
   - better recovery
   - efficiency when <m nodes fail in a n+m cluster
   
+- RGW
+  - subscribe to events like PUT
+  - push interface to AMQ, Kafka
+  - Beast frontend for RGW based on boost.asio
+  
+- RBD
+  - namespace support
+  - rbd_mirror made simpler
+  - pool - lees config overrides -> simpler
+  - creation, access, modification timestaps
+  
+- CephFS
+  - multi_fs volume support with stable release
+  - subvolume concept
+    - sub_dir of a volume with quota, unique cephx user and restricted to a Rados namespace
+ 
+ - CephFs NAS Gateways 
+  - clustered nfs_ganeesha which uses RADOS for configuration
+  - cephfs CLI 
+  - performance improvments
+ 
+- Expose storage to Kubernetes
+- Run ceph clusters in Kubernetes
+- Kubernetes as a distributed "OS"
+- Rook storage orchestrator for Kubernetes ("operator for Ceph in Kubernetes")
