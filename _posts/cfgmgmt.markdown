@@ -46,3 +46,39 @@ specific values injected in your certificates to deploy a secure autosigning
   - Monitor trends
   - Predict scale
   
+### Talk 3: Centralized Logging Patterns
+
+- Not ELK Stack anymore -> Elastic Stack
+- shipper (beats - logstash) -> parser -> elastic -> kibana
+- Log appenders
+  - PHP monolog
+  - Python: structlog
+  - .NET: Nlog
+  - JANA: Logback
+
+1. Parse: Take the log files of your applications and extract the relevant pieces of information.
+  - MetricBeat -> OS logs, FileBeat -> simple file parsing and shipping
+  - Java errors with more that one line get split and get parsed as standalone lines
+      - use multine -> pattern = where mutiline_regex
+2. Send: Add a log appender to send out your events directly without persisting them to a log file.
+
+3. Structure: Write your events in a structured file, which you can then centralize.
+
+optional: Containerize: Keep track of short lived containers and configure their logging correctly.
+Orchestrate: Stay on top of your logs even when services are short lived and dynamically allocated on Kubernetes.
+
+- Use Kibana's Grok debugger to better structure your events
+- Structure you logs no matter what
+  - use json format (e.g. "the app produces logs in json format"), which removes logstash from the stack
+  - can't do it? Dehydrate your logs before elasticsearch gets them
+- We can use all the metadata we can get
+
+
+### Talk 4: Observability Scalability
+
+- Nagios is legacy monitoring
+- Metrics based alerting (we care if the app is down not the node, yes they can relate, I know)
+- BigGraphite (in house project, fork of Graphite, adapted for Cassandra)
+- Centralized metrics
+- Centralized logs ( see tailon)
+- His team focused on collecting the metrics and did not get involved in alerting
