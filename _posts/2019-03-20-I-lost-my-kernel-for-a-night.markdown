@@ -13,7 +13,7 @@ I actually use Slack for work communication so I decided it was worth the troubl
 
 Since I am extremely lazy on "not so important" things I first tried to do it FrankenDebian style.
 
-So I add Stretch to my sources.lost, right bellow my jessie entris and `apt upgrade`.
+So I add Stretch to my sources.list, right below my jessie entries and `apt upgrade`.
 
 Then I do `apt install chromium=version` which obviously has a lot of dependencies, but I press yes anyway without hesitation.
 
@@ -71,7 +71,7 @@ So, yay, now we have our Debian entry at the grub menu.
 
 But wait, something's not right.
 
-I never get a promt for my LUKS password.
+I never get a prompt for my LUKS password.
 
 And that is because initramfs can't find my root partition, and instead drops me to an initramfs shell.
 

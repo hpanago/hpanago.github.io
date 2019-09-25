@@ -52,7 +52,7 @@ we can not just replicate, they both have data the other one does not.
 - The wanted result is to get the "bad" master back in time at exactly the time of the split.
 (Yes, any new writes on the bad master are considered faulty and we don't want them).
 
-MariaDB does not spea MySQL GTIDs.
+MariaDB does not speak MySQL GTIDs.
 `awk` -> fixed.
 And the then `cat` the output to MysSQL master.
 Then we go back. But at what moment in time?
@@ -64,7 +64,7 @@ Do some mathematical computations between old GTID and new one to find the corre
 
 - We can *not* yet predict where gh_mysql_rewind will drop up at.
 - The state of the project is just a 20K bash script running in production
-- The do manul fuckups to test it
+- The do manual fuckups to test it
 
 #### Link: https://fosdem.org/2019/schedule/event/unplitmysql/
 
@@ -99,8 +99,8 @@ just to provision a virtual machine
 ### Talk 7: Ceph wire protocol revisited - Messenger V2
 
 - Messenger is a wire-protocol specification and software implementation
-- Small communication lirary, used for other Ceph components in order to talk to each other
-- Abstracs the actual transport protocol (sockets, RDMA, DPDK)
+- Small communication library, used for other Ceph components in order to talk to each other
+- Abstracts the actual transport protocol (sockets, RDMA, DPDK)
 - Automatic handling of temporary connections/failures
 - It has an API
 
@@ -142,7 +142,7 @@ just to provision a virtual machine
 - Unified CLL for Ceph daemons
   - ceph orchestrator osd ...
   - ceph orchestrator ...
-- pg_num can be redused and automatically tuned in the background, based on expected usage
+- pg_num can be reused and automatically tuned in the background, based on expected usage
 - osds and mons report underlying storage metrics, scraping SMART metrics
  - on failure prediction it automatically marks osds as "out"
  
@@ -172,7 +172,7 @@ just to provision a virtual machine
   - namespace support
   - rbd_mirror made simpler
   - pool - lees config overrides -> simpler
-  - creation, access, modification timestaps
+  - creation, access, modification timestamps
   
 - CephFS
   - multi_fs volume support with stable release
@@ -182,7 +182,7 @@ just to provision a virtual machine
  - CephFs NAS Gateways 
   - clustered nfs_ganeesha which uses RADOS for configuration
   - cephfs CLI 
-  - performance improvments
+  - performance improvements
  
 - Expose storage to Kubernetes
 - Run ceph clusters in Kubernetes

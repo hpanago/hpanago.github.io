@@ -18,7 +18,7 @@ and repackaged to exist on your master
 
 - we already did this at GRNet, perfectly, internal Phab tasks have it all
   - We could blog post it
-  - we could also use a uppet CA certificate check
+  - we could also use a puppet CA certificate check
 
 talk notes:
 - use exit codes in your autosign script
@@ -28,7 +28,7 @@ specific values injected in your certificates to deploy a secure autosigning
 - One role to be associated with one node
 - Facts are not inhereted securely
  -  *try FACTER_role = foof*
- - you can make puppet believe wahtever you want(if it is based on facts)
+ - you can make puppet believe whatever you want(if it is based on facts)
  - When you "clean" your certificates, do you also revoke them?
  
  ### Talk 3: Drilling down a software bug: lessons about observability, monitoring, automation and good practices
@@ -36,12 +36,12 @@ specific values injected in your certificates to deploy a secure autosigning
  Basic takeways
  
  - Collect logs (and structure them to ease your debugging)
- - Get metrics to find out when your app chashes, and what is the state of the rest of the env atm
+ - Get metrics to find out when your app crashes, and what is the state of the rest of the env atm
  - Document your changes
  - Use JXM metrics (especially for Kafka)
  - Distributed tracing (microservices)
  - Zookeeper:
-    - can have concorent reads but only sequantial writes
+    - can have concurrent reads but only sequantial writes
     - master nodes decide for each write
   - Monitor trends
   - Predict scale
